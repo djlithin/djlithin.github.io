@@ -1,0 +1,18 @@
+.CoinModal {
+    font-size: small;
+}
+.CoinImage{
+        height: auto; 
+        width: auto; 
+        max-width: 50px; 
+        max-height: 50px;
+}
+.CoinImageTag{
+    margin: 0px 10px
+}
+.symbolSpan{ 
+    font-size: 15px;
+}
+.CardCss{
+    cursor: pointer;
+}
