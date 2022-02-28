@@ -21,7 +21,6 @@ const CoinCard = (props) => {
                     response.json()
                         .then((jsonData) => {
                             setcoinDetails(jsonData);
-                            // console.log(jsonData)
                             setDescription(jsonData.description.en)
                             setMarketCap(jsonData.market_data.market_cap.eur)
                             setHomePage(jsonData.links.homepage[0])

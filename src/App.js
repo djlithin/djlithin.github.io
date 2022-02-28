@@ -25,7 +25,6 @@ function App() {
           response.json()
             .then((jsonData) => {
               setCoins(jsonData);
-              console.log(jsonData);
             })
         );
     };
