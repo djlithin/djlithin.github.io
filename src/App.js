@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import CoinCard from './components/CoinCard';
-import { Button, Container, Row, Col, Navbar, NavbarBrand } from 'reactstrap';
+import { Button, Container, Row, Col, Navbar, NavbarBrand, Spinner } from 'reactstrap';
 
 const baseURL = "https://api.coingecko.com/api/v3";
 
@@ -41,7 +41,11 @@ function App() {
             </Row>
           </NavbarBrand>
         </Navbar>
-        {coins && coins.map((coin, idx) => (<CoinCard key={idx} coin={coin} />))}
+        {
+          coins ? 
+            coins.map((coin, idx) => (<CoinCard key={idx} coin={coin} />)) :
+            <Spinner>Loading...</Spinner>
+        }
         <Row className="listButton">
           <Col xs="6"><Button color="primary" size="lg" onClick={() => setPage(page - 1)}>Prev Page</Button></Col>
           <Col xs="6"><Button color="primary" size="lg" className="nextButton" onClick={() => setPage(page + 1)}>Next Page</Button></Col>
